@@ -8,6 +8,7 @@ function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+//   le hook useMutation est appelle quand on fait la function createUser qui est notre mutation de la table CREATE_USER_MUTATION
   const [createUser, { error }] = useMutation(CREATE_USER_MUTATION);
 
   const addUser = () => {

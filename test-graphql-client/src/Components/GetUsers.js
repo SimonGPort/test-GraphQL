@@ -3,6 +3,8 @@ import { useQuery, gql } from "@apollo/client";
 import { LOAD_USERS } from "../GraphQL/Queries";
 
 function GetUsers() {
+    // le hook useQuery permet de faire un appel au backend quand la page est mount
+    // https://www.apollographql.com/docs/react/data/queries/
   const { error, loading, data } = useQuery(LOAD_USERS);
   const [users, setUsers] = useState([]);
   useEffect(() => {
